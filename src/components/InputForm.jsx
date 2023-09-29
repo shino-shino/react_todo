@@ -1,12 +1,18 @@
 import React from 'react'
 
 export const InputForm = () => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("aaa");
+  }
+
   return (
     <div className='inputForm'>
-      <form>
+      <form onSubmit={handleSubmit}> 
         <input type='text'></input>
         <button>
-        <i class="fa-solid fa-plus"></i>
+        <i className="fa-solid fa-plus"></i>
         </button>
       </form>
     </div>
