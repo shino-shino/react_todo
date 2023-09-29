@@ -6,7 +6,12 @@ export const InputForm = ({taskList, setTaskList}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(inputText)
+    setTaskList([
+      ...taskList,
+      {
+        text: inputText
+      }
+    ]);
   }
 
   const handleChange = (e) => {
