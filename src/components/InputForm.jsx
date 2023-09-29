@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export const InputForm = () => {
+export const InputForm = ({taskList, setTaskList}) => {
+
+  const [inputText, setInputText] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(inputText)
   }
 
   const handleChange = (e) => {
-    var inputText = e.target.value;
-    console.log(inputText);
+    setInputText(e.target.value);
   }
 
   return (
