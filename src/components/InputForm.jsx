@@ -12,6 +12,7 @@ export const InputForm = ({taskList, setTaskList}) => {
         text: inputText
       }
     ]);
+    setInputText("")
   }
 
   const handleChange = (e) => {
@@ -21,7 +22,7 @@ export const InputForm = ({taskList, setTaskList}) => {
   return (
     <div className='inputForm'>
       <form onSubmit={handleSubmit}> 
-        <input type='text' onChange={handleChange}></input>
+        <input type='text' onChange={handleChange} value={inputText}></input>
         <button>
         <i className="fa-solid fa-plus"></i>
         </button>
