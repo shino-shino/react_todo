@@ -4,13 +4,17 @@ export const InputForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("aaa");
+  }
+
+  const handleChange = (e) => {
+    var inputText = e.target.value;
+    console.log(inputText);
   }
 
   return (
     <div className='inputForm'>
       <form onSubmit={handleSubmit}> 
-        <input type='text'></input>
+        <input type='text' onChange={handleChange}></input>
         <button>
         <i className="fa-solid fa-plus"></i>
         </button>
