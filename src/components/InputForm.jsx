@@ -10,7 +10,8 @@ export const InputForm = ({taskList, setTaskList}) => {
       ...taskList,
       {
         id: crypto.randomUUID(),
-        text: inputText
+        text: inputText,
+        completed: false
       }
     ]);
     setInputText("")
